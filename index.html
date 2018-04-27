@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+   
+    
+
+
+    <script>
+        //Notes to the unfortunate grader or future Travis - this was not made for design, but focused on the kata problems, suggestions for the future is to make functions for creating new divs/appending variables, obviously using the same variable names and schemes, also create a function loop to call all the kata functions and insert headers
+        // const sample array must appear before function calls or calls will not display-
+const sampleArray = [469, 755, 244, 245, 758, 450, 302, 20, 712, 71, 456, 21, 398, 339, 882, 848, 179, 535, 940, 472];
+        insertheader(1)
+        kata1()
+        insertheader(2)
+        kata2()
+        insertheader(3)
+        kata3()
+        insertheader(4)
+        kata4()
+        insertheader(5)
+        kata5()
+        insertheader(6)
+        kata6()
+        insertheader(7)
+        kata7()
+        insertheader(8)
+        kata8()
+        insertheader(9)
+        kata9()
+        insertheader(10)
+        kata10()
+        insertheader(11)
+        kata11()
+        insertheader(12)
+        kata12()
+        insertheader(13)
+        kata13()
+        insertheader(14)
+        kata14()
+        insertheader(15)
+        kata15()
+        insertheader(16)
+        kata16()
+        insertheader(17)
+        kata17()
+        insertheader(18)
+        kata18()
+        insertheader(19)
+        kata19(20)
+        insertheader(20)
+        kata20(20)
+        insertheader(21)
+        kata21(20)
+        insertheader(22)
+        kata22(20)
+        insertheader(23)
+        kata23(20)
+
+        function insertheader(katanumber){
+            let headspace = document.createElement("div")
+            document.body.appendChild(headspace)
+            let thetitle = "kata" + katanumber
+            const textNode1 = document.createTextNode(thetitle)
+            headspace.appendChild(textNode1)
+        }
+        
+
+           function kata1() {
+            let answerspace = document.createElement("div");
+            document.body.appendChild(answerspace)
+            let answer = ""
+
+
+           for(let i = 0; i <= 20; i++){ 
+            answer += i + " ";        
+        }
+        const newText = document.createTextNode(answer)
+        answerspace.appendChild(newText); 
+            
+       }
+   
+   
+   function kata2 () {
+       let answerspace = document.createElement("div");
+       document.body.appendChild(answerspace)
+       let answer = "";
+       for(let i=0; i<=20; i += 2){
+           answer += i + " "
+       }
+       const newText = document.createTextNode(answer)
+       answerspace.appendChild(newText);
+   }
+   
+    
+    function kata3 () {
+        let numberthree = document.createElement("p");
+        document.body.appendChild(numberthree);
+        let variable = ""
+        for(let i = 1; i <= 20; i += 2){
+            variable += i + " "
+        }
+        const answer = document.createTextNode(variable);
+        numberthree.appendChild(answer);
+        
+    }
+
+
+    function kata4() {
+        let place = document.createElement("span");
+        document.body.appendChild(place);
+        let str = ""
+        for(let i = 0; i <= 100; i += 5){
+        str += i + " "
+    }
+    const textelement = document.createTextNode(str);
+    place.appendChild(textelement);
+
+    }
+    
+
+    function kata5 () {
+        let newElement = document.createElement("div");
+        document.body.appendChild(newElement);
+        let str =""
+        for(let i = 0; i<=10; i++){
+        str += i*i + " ";
+            }
+        const newText = document.createTextNode(str);
+        newElement.appendChild(newText);
+    }
+    
+
+
+    function kata6() {
+        const newElement = document.createElement("span");
+        document.body.appendChild(newElement)
+        let str = "";
+            for(let i = 20; i >= 0; i--){
+             str += i + " ";
+        }
+        const newText = document.createTextNode(str);
+        newElement.appendChild(newText);
+    }
+
+
+   function kata7() {
+        const bodyElement = document.createElement("div");
+        document.body.appendChild(bodyElement);
+        let str = ""
+             for(let i = 20; i >= 0; i -=2){
+                str += i + " "
+        }
+            const newText = document.createTextNode(str);
+            bodyElement.appendChild(newText)
+   }
+   
+
+   function kata8() {
+       const bodyElement = document.createElement("span");
+       document.body.appendChild(bodyElement);
+       let str = ""
+       for(let i = 20; i>=0; i -= 2){
+           str += i + " "
+       }
+       const newText = document.createTextNode(str);
+       bodyElement.appendChild(newText)
+   }
+   
+
+function kata9(){
+        const thisisavariable = document.createElement("p");
+        document.body.appendChild(thisisavariable);
+        let mebestring = ""
+
+            for(let i = 100; i >=0; i -= 5){
+            mebestring += i + " "
+}
+
+        const thisisnode = document.createTextNode(mebestring)
+        thisisavariable.appendChild(thisisnode)
+}
+
+function kata10() {
+        const imadeathing = document.createElement("div")
+        document.body.appendChild(imadeathing)
+            let imadeastring = ""
+
+            for(let i = 10; i >=0; i--){
+                imadeastring += i*i + " "
+    }
+    const thisisnode = document.createTextNode(imadeastring);
+    imadeathing.appendChild(thisisnode);
+}
+
+
+
+//display array
+function kata11 () { 
+    const container = document.createElement("div");
+        document.body.appendChild(container);
+        const arrayoutput = document.createTextNode(sampleArray);
+        container.appendChild(arrayoutput);
+}
+
+//array returns all even numbers in array
+function kata12() {
+    const container = document.createElement("p");
+    document.body.appendChild(container);
+    
+    let output= ""
+    for (let i=0; i < sampleArray.length; i++){
+         if(sampleArray[i] % 2 ==0){
+        output += sampleArray[i] + " "
+        }
+    }
+    const arrayText = document.createTextNode(output);
+        container.appendChild(arrayText);
+}
+
+function kata13() {
+    const container = document.createElement("p");
+    document.body.appendChild(container);
+    
+    let output= ""
+    for (let i=0; i < sampleArray.length; i++){
+         if(sampleArray[i] % 2 !==0){
+        output += sampleArray[i] + " "
+        }
+    }
+    const arrayText = document.createTextNode(output);
+        container.appendChild(arrayText);
+}
+
+function kata14() {
+    const container = document.createElement("p");
+    document.body.appendChild(container);
+    
+    let output= ""
+    for (let i=0; i < sampleArray.length; i++){
+        
+        output += sampleArray[i] * sampleArray[i] + " "
+        
+    }
+    const arrayText = document.createTextNode(output);
+        container.appendChild(arrayText);
+}
+
+function kata15() {
+    const container = document.createElement("p");
+    document.body.appendChild(container);
+
+    let answer = 0;
+    for (let i=0; i <=20; i++){
+        answer = i+answer
+    }
+    const arrayText = document.createTextNode(answer);
+        container.appendChild(arrayText);
+}
+
+function kata16() {
+    const container = document.createElement("p");
+    document.body.appendChild(container);
+        let output = 0;
+
+        for(let i = 0; i < sampleArray.length; i++){
+            output = sampleArray[i]+output
+        }
+        const arrayText = document.createTextNode(output);
+        container.appendChild(arrayText);
+
+}
+
+function kata17() {
+    const container = document.createElement("span");
+    document.body.appendChild(container);
+
+    let output = sampleArray[0];
+        for (let i = 0; i < sampleArray.length; i++){
+
+                if(sampleArray[i]< output){
+                            output = sampleArray[i];
+                        }
+                }
+
+        const arrayText = document.createTextNode(output);
+        container.appendChild(arrayText);
+        }
+    
+function kata18() {
+        const container = document.createElement("div");
+    document.body.appendChild(container);
+
+    let output = sampleArray[0];
+        for (let i = 0; i < sampleArray.length; i++){
+
+                if(sampleArray[i]> output){
+                            output = sampleArray[i];
+                        }
+                }
+
+        const arrayText = document.createTextNode(output);
+        container.appendChild(arrayText);
+    }
+
+     
+      function kata19(boxcount) {
+
+          function createBox() {
+            const box = document.createElement("div");
+            document.body.appendChild(box)
+            box.style.background = "grey"; 
+            box.style.width = 100 + "px";
+            box.style.height = 20 + "px";
+            box.style.margin = 10 + "px";
+        }
+            for(let i=0; i < boxcount; i++){
+            createBox()}
+        }
+
+
+function kata20(boxcount) {
+
+function createBox() {
+  const box = document.createElement("div");
+  document.body.appendChild(box)
+  box.style.background = "blue"; 
+  box.style.width = j + "px";
+  box.style.height = 20 + "px";
+  box.style.margin = 10 + "px";
+}
+  for(var i=0, j = 105; i < boxcount; i++, j +=5){
+  createBox()
+  }
+}
+
+function kata21(boxcount) {
+
+function createBox() {
+  const box = document.createElement("div");
+  document.body.appendChild(box)
+  box.style.background = "green"; 
+  box.style.width =  sampleArray[i] + "px";
+  box.style.height = 20 + "px";
+  box.style.margin = 10 + "px";
+}
+  for(var i=0; i < boxcount; i++){
+  createBox();
+  }
+}
+
+function kata22(boxcount) {
+let boxcolor= ""
+function createBox() {
+  const box = document.createElement("div");
+  document.body.appendChild(box)
+  box.style.background = boxcolor; 
+  box.style.width =  sampleArray[i] + "px";
+  box.style.height = 20 + "px";
+  box.style.margin = 10 + "px";
+}
+  for(var i=0; i < boxcount; i++){
+  createBox();
+  if(i %2 ==0){boxcolor ="red"
+  }else {boxcolor="grey"}
+  }
+}
+
+function kata23(boxcount) {
+let boxcolor= ""
+function createBox() {
+  const box = document.createElement("div");
+  document.body.appendChild(box)
+  box.style.background = boxcolor; 
+  box.style.width =  sampleArray[i] + "px";
+  box.style.height = 20 + "px";
+  box.style.margin = 10 + "px";
+}
+  for(var i=0; i < boxcount; i++){
+  createBox();
+  if(sampleArray[i] % 2 ==0){boxcolor ="blue"
+  }else {boxcolor="grey"}
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
